@@ -1,0 +1,216 @@
+html,
+body {
+  background-color: #121215;
+}
+.solar-system {
+  position: relative;
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+/* Some positioning rules that are common for all objects */
+.orbit {
+  border: 1px dashed #666;
+}
+#sun,
+.orbit,
+.orbit + div,
+.orbit + div > div {
+  position: absolute;
+}
+#sun,
+.orbit,
+.orbit + div {
+  top: 50%;
+  left: 50%;
+}
+.orbit + div > div {
+  top: 0;
+  left: 50%;
+}
+.orbit,
+.orbit + div div,
+#earth {
+  border-radius: 50%;
+}
+/* Individual objects rules */
+#sun {
+  /* Position of the sun*/
+  height: 20px;
+  width: 20px;
+  background-color: #fae20a;
+  margin-top: -12px;
+  margin-left: -10px;
+  border-radius: 50%;
+  box-shadow: 0 0 100px orange;
+}  /* Position of the mercury*/
+#mercury {
+  height: 10px;
+  width: 10px;
+  margin-top: -5px;
+  margin-left: 5px;
+  background-color: #a65e22;
+}
+.mercury-orbit,
+.mercury-spin {
+  height: 60px;
+  width: 60px;
+  margin-top: -30px;
+  margin-left: -30px;
+  }  /* Orbit of the mercury*/
+#venus {
+  height: 20px;
+  width: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  background-color: #3498db;
+  box-shadow: 0 0 34px #3a4385;
+}  /* Position of the venus*/
+.venus-orbit,
+.venus-spin {
+  height: 110px;
+  width: 110px;
+  margin-top: -55px;
+  margin-left: -55px;
+}  /* Orbit of the venus*/
+#earth {
+  position: absolute;
+  top: -25;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  box-shadow: 0 0 34px #3a4385;
+}  /* Position of the earth*/
+.earth-orbit,
+.earth-spin {
+  height: 300px;
+  width: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+}  /* Orbit of the earth*/
+#moon {
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 14px #3a4385;
+}  /* Position of the moon*/
+.moon-orbit,
+.moon-spin {
+  height: 100px;
+  width: 100px;
+  margin-top: -55px;
+  margin-left: -55px;
+  border-color: #447;
+}  /* Orbit of the moon*/
+#mars {
+  height: 10px;
+  width: 10px;
+  margin-top: -5px;
+  margin-left: 5px;
+  background-color: #a65e22;
+}  /* Position of the mars*/
+.mars-orbit,
+.mars-spin {
+  height: 400px;
+  width: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  }  /* Orbit of the mars*/
+#jupiter {
+  height: 50px;
+  width: 50px;
+  margin-top: -20px;
+  margin-left: 20px;
+  background-color: #a65e22;
+}  /* Position of the jupiter*/
+.jupiter-orbit,
+.jupiter-spin {
+  height: 600px;
+  width: 600px;
+  margin-top: -300px;
+  margin-left: -300px;
+  }  /* Orbit of the jupiter*/
+#saturn {
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  margin-left: 20px;
+  background-color: #a65e22;
+}  /* Position of the saturn*/
+.saturn-orbit,
+.saturn-spin {
+  height: 700px;
+  width: 700px;
+  margin-top: -350px;
+  margin-left: -350px;
+}  /* Orbit of the saturn*/
+#uranus {
+  height: 30px;
+  width: 30px;
+  margin-top: -15px;
+  margin-left: -15px;
+  background-color: #1392e7;
+  box-shadow: 0 0 34px #3748c4;
+}  /* Position of the uranus*/
+.uranus-orbit,
+.uranus-spin {
+  height: 800px;
+  width: 800px;
+  margin-top: -400px;
+  margin-left: -400px;
+}  /* Orbit of the uranus*/
+#neptun {
+  height: 25px;
+  width: 25px;
+  margin-top: -15px;
+  margin-left: -15px;
+  background-color: #3498db;
+  box-shadow: 0 0 34px #3a4385;
+}  /* Position of the neptun*/
+.neptun-orbit,
+.neptun-spin {
+  height: 900px;
+  width: 900px;
+  margin-top: -450px;
+  margin-left: -450px;
+}  /* Orbit of the neptun*/
+/* Spinning animations */
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.venus-spin {
+  animation: spin-right 0.22s linear infinite;
+}
+.mercury-spin {
+  animation: spin-right 0.88s linear infinite;
+}
+.earth-spin {
+  animation: spin-right 3.65s linear infinite;
+}
+.moon-spin {
+  animation: spin-right 0.3s linear infinite;
+}
+.mars-spin {
+  animation: spin-right 4.38s linear infinite;
+}
+.jupiter-spin {
+  animation: spin-right 4.38s linear infinite;
+}
+.saturn-spin {
+  animation: spin-right 10.6s linear infinite;
+}
+.uranus-spin {
+  animation: spin-right 30.7s linear infinite;
+}
+.neptun-spin {
+  animation: spin-right 60.23s linear infinite;
+}
